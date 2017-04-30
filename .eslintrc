@@ -24,6 +24,7 @@
   "rules": {
     "capitalized-comments": "off",
     "dot-location": ["error", "property"],
+    "id-length": 0,
     "indent": ["error", 2],
     "max-statements": ["error", 20],
     "newline-after-var": "off",
