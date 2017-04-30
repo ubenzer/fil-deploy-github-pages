@@ -1,25 +1,9 @@
 #!/usr/bin/env node
-import debugc from 'debug'
-import fs from 'fs-extra'
-import {getOutPath} from '../config'
-import globby from 'globby'
-import path from 'path'
-
-const debug = debugc('fil:site')
+import clean from '../utils/clean'
 
 /* eslint-disable no-console */
-// removes everything but .git from dist
-const clean = async () => {
-  const outPath = getOutPath()
-
-  console.log('Cleaning dist folder...')
-
-  const files = await globby(['*', '!.git/'], {cwd: outPath})
-
-  await Promise.all(files.map((file) => {
-    debug(`Removing "${file}"...`)
-    return fs.remove(path.join(outPath, file))
-  }))
-}
-
-export default clean
+clean()
+  .catch((e) => {
+    console.error(e)
+    process.exitCode = 2
+  })
