@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import debugc from 'debug'
 import fs from 'fs-extra'
 import {getOutPath} from '../config'

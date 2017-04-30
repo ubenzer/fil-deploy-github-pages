@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import {addAll, commit, push} from '../git'
 import fs from 'fs-extra'
 import {getOutPath} from '../config'

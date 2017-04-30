@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import {addAll, clone, pull, reset} from '../git'
 import debugc from 'debug'
 import fs from 'fs-extra'
