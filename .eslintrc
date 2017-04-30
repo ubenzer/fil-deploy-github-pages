@@ -1,0 +1,38 @@
+{
+  "root": true,
+
+  "env": {
+    "node": true,
+    "es6": true
+  },
+
+  "globals": {},
+
+  "extends": [
+    "eslint:all"
+  ],
+
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 8,
+    "ecmaFeatures": {
+      "impliedStrict": true,
+      "experimentalObjectRestSpread": true
+    }
+  },
+
+  "rules": {
+    "capitalized-comments": "off",
+    "dot-location": ["error", "property"],
+    "indent": ["error", 2],
+    "max-statements": ["error", 20],
+    "newline-after-var": "off",
+    "newline-before-return": "off",
+    "padded-blocks": ["error", "never"],
+    "require-await": "off",
+    "semi": ["error", "never"],
+    "one-var": ["error", "never"],
+    "quote-props": ["error", "consistent-as-needed"],
+    "quotes": ["error", "single", {"avoidEscape": true}]
+  }
+}
