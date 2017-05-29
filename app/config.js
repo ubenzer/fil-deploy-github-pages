@@ -4,7 +4,7 @@ import path from 'path'
 
 export const getOutPath = () => {
   const fileName = path.join(process.cwd(), 'index.js')
-  const filProject = require(fileName).default
+  const filProject = require(fileName)
   return filProject.outPath()
 }
 

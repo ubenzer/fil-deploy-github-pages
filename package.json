@@ -1,6 +1,6 @@
 {
   "name": "fil-deploy-github-pages",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "description": "A helper tool for fil to deploy projects to github pages easily",
   "scripts": {
     "compile": "shx --silent rm -rf compiled && babel app -d compiled",
