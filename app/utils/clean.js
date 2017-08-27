@@ -13,7 +13,10 @@ const clean = async () => {
 
   console.log('Cleaning dist folder...')
 
-  const files = await globby(['*', '!.git/'], {cwd: outPath})
+  const files = await globby([
+    '*',
+    '!.git/'
+  ], {cwd: outPath})
 
   await Promise.all(files.map((file) => {
     debug(`Removing "${file}"...`)

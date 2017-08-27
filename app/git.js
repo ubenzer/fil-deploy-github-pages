@@ -10,7 +10,11 @@ const clone = async () => {
 
   console.log('Cloning remote repo...')
   return spawn({
-    args: ['clone', remoteRepoUrl, '.'],
+    args: [
+      'clone',
+      remoteRepoUrl,
+      '.'
+    ],
     cwd: path.join(process.cwd(), outPath),
     exe: 'git',
     onStderr: console.error,
@@ -23,7 +27,11 @@ const commit = async ({message}) => {
 
   console.log('Committing...')
   return spawn({
-    args: ['commit', '-m', message],
+    args: [
+      'commit',
+      '-m',
+      message
+    ],
     cwd: path.join(process.cwd(), outPath),
     exe: 'git',
     onStderr: console.error,
@@ -36,7 +44,10 @@ const addAll = async () => {
 
   console.log('Staging all changes...')
   return spawn({
-    args: ['add', '*'],
+    args: [
+      'add',
+      '*'
+    ],
     cwd: path.join(process.cwd(), outPath),
     exe: 'git',
     onStderr: console.error,
@@ -49,7 +60,10 @@ const reset = async () => {
 
   console.log('Resetting local changes...')
   return spawn({
-    args: ['reset', '--hard'],
+    args: [
+      'reset',
+      '--hard'
+    ],
     cwd: path.join(process.cwd(), outPath),
     exe: 'git',
     onStderr: console.error,
